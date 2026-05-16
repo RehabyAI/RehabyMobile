@@ -1,0 +1,4 @@
+com.rehaby.app.test.app-androidTest-0 /Users/apple/Documents/android-workspace/hackathon/Rehaby /app/build/generated/res/resValues/androidTest/debug
+com.rehaby.app.test.app-mergeDebugAndroidTestResources-1 /Users/apple/Documents/android-workspace/hackathon/Rehaby /app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.rehaby.app.test.app-mergeDebugAndroidTestResources-2 /Users/apple/Documents/android-workspace/hackathon/Rehaby /app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.rehaby.app.test.app-merged_res-3 /Users/apple/Documents/android-workspace/hackathon/Rehaby /app/build/intermediates/merged_res/debugAndroidTest

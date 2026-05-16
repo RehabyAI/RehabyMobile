@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFFF</color>
+    <color name="card_background">#F9FAFB</color>
+    <color name="error">#EF4444</color>
+    <color name="ic_launcher_background">#4F46E5</color>
+    <color name="primary">#4F46E5</color>
+    <color name="primary_dark">#4338CA</color>
+    <color name="success">#059669</color>
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#6B7280</color>
+    <string name="already_have_account">Already have an account? Sign in</string>
+    <string name="app_name">Rehaby</string>
+    <string name="back">Back</string>
+    <string name="back_to_dashboard">Back to dashboard</string>
+    <string name="camera_failed">Camera failed: %1$s</string>
+    <string name="camera_permission_required">Camera permission is required for pose detection.</string>
+    <string name="correct_pose">Correct pose</string>
+    <string name="create_account">Create account</string>
+    <string name="demo_toast">Demo video is not included in this build.</string>
+    <string name="detail_subtitle_format">%1$s · Pose guided</string>
+    <string name="fill_email_password">Enter email and password to continue</string>
+    <string name="fill_signup_fields">Enter your name, email, and password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="forgot_password_hint">Password reset is not available in this demo build.</string>
+    <string name="form_accuracy">Form accuracy</string>
+    <string name="greeting_placeholder">Good morning · Ready to move</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_password">Password</string>
+    <string name="hold_progress">%1$d / %2$d sec</string>
+    <string name="hold_subtitle">Hold · Set 1 of %1$d</string>
+    <string name="instructions">Instructions</string>
+    <string name="meta_lower_body">Lower body · Guided</string>
+    <string name="pause_toast">Pause is not implemented in this build.</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="pose_detection_live">Pose detection live</string>
+    <string name="pose_init_failed">Pose model: %1$s</string>
+    <string name="rep_progress">%1$d / %2$d</string>
+    <string name="rep_subtitle">Reps · Set 1 of %1$d</string>
+    <string name="session_complete">Session complete</string>
+    <string name="session_great_work">Great work today!</string>
+    <string name="session_ready">Today\'s rehab session ready</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up_submit">Create account</string>
+    <string name="signup_step_hint">Demo — no server; info is not saved</string>
+    <string name="start_exercise">Start exercise</string>
+    <string name="stat_adherence">72%\nAdherence</string>
+    <string name="stat_sessions">3\nSessions</string>
+    <string name="stat_streak">5d\nStreak</string>
+    <string name="summary_duration_label">Duration</string>
+    <string name="summary_reps_label">Reps / hold</string>
+    <string name="tag_pose_on">Pose detection on</string>
+    <string name="tagline">AI Rehabilitation at Home</string>
+    <string name="today_exercises">Today\'s exercises</string>
+    <string name="voice_feedback_english">English voice feedback on</string>
+    <string name="watch_demo">Watch demo</string>
+    <style name="StatBox">
+        <item name="android:background">@drawable/bg_stat_box</item>
+    </style>
+    <style name="Theme.Rehaby" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryContainer">@color/card_background</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>

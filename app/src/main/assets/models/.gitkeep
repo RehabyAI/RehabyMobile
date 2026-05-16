@@ -1,0 +1,2 @@
+Gradle task downloadPoseModel writes pose_landmarker_lite.task here before preBuild.
+Manual: https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/latest/pose_landmarker_lite.task

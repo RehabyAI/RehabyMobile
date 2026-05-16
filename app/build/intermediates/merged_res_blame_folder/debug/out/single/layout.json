@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/activity_exercise_detail.xml",
+        "source": "com.rehaby.app-main-39:/layout/activity_exercise_detail.xml"
+    },
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/activity_pose_detection.xml",
+        "source": "com.rehaby.app-main-39:/layout/activity_pose_detection.xml"
+    },
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/item_instruction_step.xml",
+        "source": "com.rehaby.app-main-39:/layout/item_instruction_step.xml"
+    },
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/item_exercise.xml",
+        "source": "com.rehaby.app-main-39:/layout/item_exercise.xml"
+    },
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "com.rehaby.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/activity_signup.xml",
+        "source": "com.rehaby.app-main-39:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/activity_login.xml",
+        "source": "com.rehaby.app-main-39:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/activity_splash.xml",
+        "source": "com.rehaby.app-main-39:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.rehaby.app-mergeDebugResources-36:/layout/activity_session_summary.xml",
+        "source": "com.rehaby.app-main-39:/layout/activity_session_summary.xml"
+    }
+]
