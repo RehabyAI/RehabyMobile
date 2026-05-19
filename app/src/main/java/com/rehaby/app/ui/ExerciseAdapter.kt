@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.rehaby.app.ExerciseDetailActivity
+import coil.load
 import com.rehaby.app.databinding.ItemExerciseBinding
 import com.rehaby.app.model.Exercise
+import com.rehaby.app.util.YoutubeThumbnails
 
 class ExerciseAdapter(
     private val items: List<Exercise>
@@ -23,9 +25,14 @@ class ExerciseAdapter(
         holder.bind(items[position])
     }
 
-    inner class VH(private val binding: ItemExerciseBinding) : RecyclerView.ViewHolder(binding.root) {
+        inner class VH(private val binding: ItemExerciseBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(exercise: Exercise) {
-            binding.exerciseIcon.setImageResource(exercise.iconResId)
+            YoutubeThumbnails.hqDefaultFromWatchUrl(exercise.demoVideoUrl)?.let { thumb ->
+                binding.exerciseIcon.load(thumb) {
+                    placeholder(exercise.iconResId)
+                    error(exercise.iconResId)
+                }
+            } ?: binding.exerciseIcon.setImageResource(exercise.iconResId)
             binding.exerciseName.text = exercise.name
             val setsReps = if (exercise.holdSeconds > 0) {
                 "${exercise.sets} sets · ${exercise.holdSeconds} sec hold"

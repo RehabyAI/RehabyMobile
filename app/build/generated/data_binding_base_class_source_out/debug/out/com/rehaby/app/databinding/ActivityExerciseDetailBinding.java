@@ -30,7 +30,7 @@ public final class ActivityExerciseDetailBinding implements ViewBinding {
   public final LinearLayout detailHeader;
 
   @NonNull
-  public final ImageView heroIcon;
+  public final ImageView heroImage;
 
   @NonNull
   public final LinearLayout instructionsContainer;
@@ -54,18 +54,22 @@ public final class ActivityExerciseDetailBinding implements ViewBinding {
   public final TextView toolbarTitle;
 
   @NonNull
+  public final MaterialButton viewReferenceButton;
+
+  @NonNull
   public final MaterialButton watchDemoButton;
 
   private ActivityExerciseDetailBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageView backButton, @NonNull LinearLayout detailHeader,
-      @NonNull ImageView heroIcon, @NonNull LinearLayout instructionsContainer,
+      @NonNull ImageView heroImage, @NonNull LinearLayout instructionsContainer,
       @NonNull MaterialButton startExerciseButton, @NonNull Chip tagDifficulty,
       @NonNull Chip tagPose, @NonNull Chip tagSetsReps, @NonNull TextView toolbarSubtitle,
-      @NonNull TextView toolbarTitle, @NonNull MaterialButton watchDemoButton) {
+      @NonNull TextView toolbarTitle, @NonNull MaterialButton viewReferenceButton,
+      @NonNull MaterialButton watchDemoButton) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.detailHeader = detailHeader;
-    this.heroIcon = heroIcon;
+    this.heroImage = heroImage;
     this.instructionsContainer = instructionsContainer;
     this.startExerciseButton = startExerciseButton;
     this.tagDifficulty = tagDifficulty;
@@ -73,6 +77,7 @@ public final class ActivityExerciseDetailBinding implements ViewBinding {
     this.tagSetsReps = tagSetsReps;
     this.toolbarSubtitle = toolbarSubtitle;
     this.toolbarTitle = toolbarTitle;
+    this.viewReferenceButton = viewReferenceButton;
     this.watchDemoButton = watchDemoButton;
   }
 
@@ -115,9 +120,9 @@ public final class ActivityExerciseDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.heroIcon;
-      ImageView heroIcon = ViewBindings.findChildViewById(rootView, id);
-      if (heroIcon == null) {
+      id = R.id.heroImage;
+      ImageView heroImage = ViewBindings.findChildViewById(rootView, id);
+      if (heroImage == null) {
         break missingId;
       }
 
@@ -163,6 +168,12 @@ public final class ActivityExerciseDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.viewReferenceButton;
+      MaterialButton viewReferenceButton = ViewBindings.findChildViewById(rootView, id);
+      if (viewReferenceButton == null) {
+        break missingId;
+      }
+
       id = R.id.watchDemoButton;
       MaterialButton watchDemoButton = ViewBindings.findChildViewById(rootView, id);
       if (watchDemoButton == null) {
@@ -170,8 +181,9 @@ public final class ActivityExerciseDetailBinding implements ViewBinding {
       }
 
       return new ActivityExerciseDetailBinding((ConstraintLayout) rootView, backButton,
-          detailHeader, heroIcon, instructionsContainer, startExerciseButton, tagDifficulty,
-          tagPose, tagSetsReps, toolbarSubtitle, toolbarTitle, watchDemoButton);
+          detailHeader, heroImage, instructionsContainer, startExerciseButton, tagDifficulty,
+          tagPose, tagSetsReps, toolbarSubtitle, toolbarTitle, viewReferenceButton,
+          watchDemoButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

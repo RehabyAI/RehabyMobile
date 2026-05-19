@@ -1814,6 +1814,7 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="coil_request_manager" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
@@ -2013,28 +2014,45 @@
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="correct_pose">Correct pose</string>
     <string name="create_account">Create account</string>
-    <string name="demo_toast">Demo video is not included in this build.</string>
     <string name="detail_subtitle_format">%1$s · Pose guided</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
   </string>
     <string name="error_icon_content_description">Error</string>
+    <string name="errors_empty">No posture errors recorded yet.</string>
+    <string name="errors_subtitle">Most common posture issues</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="fill_email_password">Enter email and password to continue</string>
-    <string name="fill_signup_fields">Enter your name, email, and password</string>
+    <string name="fill_signup_fields">Fill in all fields to continue</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="forgot_password_hint">Password reset is not available in this demo build.</string>
     <string name="form_accuracy">Form accuracy</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_other">Other</string>
+    <string name="greeting_named">Hi, %1$s</string>
     <string name="greeting_placeholder">Good morning · Ready to move</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="hint_age">Age</string>
+    <string name="hint_condition">Condition / injury</string>
     <string name="hint_email">Email</string>
     <string name="hint_full_name">Full name</string>
+    <string name="hint_gender">Gender</string>
     <string name="hint_password">Password</string>
+    <string name="hint_rehab_plan">Rehab plan notes</string>
+    <string name="history_empty">No session history yet.</string>
+    <string name="history_no_meta">Session details</string>
+    <string name="history_reps_fmt">%1$d reps</string>
+    <string name="history_score_fmt">Avg %1$d</string>
+    <string name="history_subtitle">Your completed sessions</string>
+    <string name="history_unknown_exercise">Session</string>
     <string name="hold_progress">%1$d / %2$d sec</string>
     <string name="hold_subtitle">Hold · Set 1 of %1$d</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
+    <string name="insights_load_failed">Could not load data. Check your connection.</string>
+    <string name="insights_need_patient">Create an account to see your patient data here.</string>
     <string name="instructions">Instructions</string>
     <string name="item_view_role_description">Tab</string>
     <string name="m3_exceed_max_badge_text_suffix" translatable="false"><ns2:g example="Some te" id="part of a long text">%1$s</ns2:g><ns2:g example="…" id="suffix">%2$s</ns2:g></string>
@@ -2144,6 +2162,7 @@
     <string name="mtrl_switch_track_path" translatable="false">M0,16 A16,16 0 0,1 16,0 H36 A16,16 0 0,1 36,32 H16 A16,16 0 0,1 0,16</string>
     <string description="Button text to indicate that the widget will ignore the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_cancel">Cancel</string>
     <string description="Button text to indicate that the widget will save the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_confirm">OK</string>
+    <string name="no_app_to_open_link">No app found to open this link</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
@@ -2162,13 +2181,17 @@
     <string description="Content description for the X button to clear text [CHAR_LIMIT=NONE]" name="searchview_clear_text_content_description">Clear text</string>
     <string description="Content description for the navigation button to return to the previous screen [CHAR_LIMIT=NONE]" name="searchview_navigation_content_description">Back</string>
     <string name="session_complete">Session complete</string>
+    <string name="session_feedback_avg_api">Remote analysis avg score: %1$d.</string>
     <string name="session_great_work">Great work today!</string>
     <string name="session_ready">Today\'s rehab session ready</string>
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up_submit">Create account</string>
-    <string name="signup_step_hint">Demo — no server; info is not saved</string>
+    <string name="signup_failed">Could not create account (%1$d)</string>
+    <string name="signup_network_error">Could not reach server. Check your connection.</string>
+    <string name="signup_parse_error">Invalid response from server</string>
+    <string name="signup_step_hint">Create your rehab profile (synced online)</string>
     <string name="start_exercise">Start exercise</string>
     <string name="stat_adherence">72%\nAdherence</string>
     <string name="stat_sessions">3\nSessions</string>
@@ -2176,9 +2199,16 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="summary_duration_label">Duration</string>
     <string name="summary_reps_label">Reps / hold</string>
+    <string name="tab_history">History</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_patient_errors">Patient errors</string>
+    <string name="tab_trends">Trends</string>
     <string name="tag_pose_on">Pose detection on</string>
     <string name="tagline">AI Rehabilitation at Home</string>
     <string name="today_exercises">Today\'s exercises</string>
+    <string name="trends_empty">No trend data yet. Complete a session to see your scores.</string>
+    <string name="trends_subtitle">Daily average form score</string>
+    <string name="view_reference_photo">View reference photo (Pinterest)</string>
     <string name="voice_feedback_english">English voice feedback on</string>
     <string name="watch_demo">Watch demo</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

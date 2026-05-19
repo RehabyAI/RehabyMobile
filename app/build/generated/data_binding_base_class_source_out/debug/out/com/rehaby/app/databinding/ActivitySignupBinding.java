@@ -12,6 +12,7 @@ import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.rehaby.app.R;
@@ -24,10 +25,22 @@ public final class ActivitySignupBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final TextInputEditText emailInput;
+  public final TextInputEditText ageInput;
 
   @NonNull
-  public final TextInputLayout emailLayout;
+  public final TextInputLayout ageLayout;
+
+  @NonNull
+  public final TextInputEditText conditionInput;
+
+  @NonNull
+  public final TextInputLayout conditionLayout;
+
+  @NonNull
+  public final MaterialAutoCompleteTextView genderInput;
+
+  @NonNull
+  public final TextInputLayout genderLayout;
 
   @NonNull
   public final TextView goToLogin;
@@ -39,10 +52,10 @@ public final class ActivitySignupBinding implements ViewBinding {
   public final TextInputLayout nameLayout;
 
   @NonNull
-  public final TextInputEditText passwordInput;
+  public final TextInputEditText rehabPlanInput;
 
   @NonNull
-  public final TextInputLayout passwordLayout;
+  public final TextInputLayout rehabPlanLayout;
 
   @NonNull
   public final ImageView signupBack;
@@ -51,19 +64,25 @@ public final class ActivitySignupBinding implements ViewBinding {
   public final MaterialButton submitSignupButton;
 
   private ActivitySignupBinding(@NonNull NestedScrollView rootView,
-      @NonNull TextInputEditText emailInput, @NonNull TextInputLayout emailLayout,
+      @NonNull TextInputEditText ageInput, @NonNull TextInputLayout ageLayout,
+      @NonNull TextInputEditText conditionInput, @NonNull TextInputLayout conditionLayout,
+      @NonNull MaterialAutoCompleteTextView genderInput, @NonNull TextInputLayout genderLayout,
       @NonNull TextView goToLogin, @NonNull TextInputEditText nameInput,
-      @NonNull TextInputLayout nameLayout, @NonNull TextInputEditText passwordInput,
-      @NonNull TextInputLayout passwordLayout, @NonNull ImageView signupBack,
+      @NonNull TextInputLayout nameLayout, @NonNull TextInputEditText rehabPlanInput,
+      @NonNull TextInputLayout rehabPlanLayout, @NonNull ImageView signupBack,
       @NonNull MaterialButton submitSignupButton) {
     this.rootView = rootView;
-    this.emailInput = emailInput;
-    this.emailLayout = emailLayout;
+    this.ageInput = ageInput;
+    this.ageLayout = ageLayout;
+    this.conditionInput = conditionInput;
+    this.conditionLayout = conditionLayout;
+    this.genderInput = genderInput;
+    this.genderLayout = genderLayout;
     this.goToLogin = goToLogin;
     this.nameInput = nameInput;
     this.nameLayout = nameLayout;
-    this.passwordInput = passwordInput;
-    this.passwordLayout = passwordLayout;
+    this.rehabPlanInput = rehabPlanInput;
+    this.rehabPlanLayout = rehabPlanLayout;
     this.signupBack = signupBack;
     this.submitSignupButton = submitSignupButton;
   }
@@ -95,15 +114,39 @@ public final class ActivitySignupBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.emailInput;
-      TextInputEditText emailInput = ViewBindings.findChildViewById(rootView, id);
-      if (emailInput == null) {
+      id = R.id.ageInput;
+      TextInputEditText ageInput = ViewBindings.findChildViewById(rootView, id);
+      if (ageInput == null) {
         break missingId;
       }
 
-      id = R.id.emailLayout;
-      TextInputLayout emailLayout = ViewBindings.findChildViewById(rootView, id);
-      if (emailLayout == null) {
+      id = R.id.ageLayout;
+      TextInputLayout ageLayout = ViewBindings.findChildViewById(rootView, id);
+      if (ageLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.conditionInput;
+      TextInputEditText conditionInput = ViewBindings.findChildViewById(rootView, id);
+      if (conditionInput == null) {
+        break missingId;
+      }
+
+      id = R.id.conditionLayout;
+      TextInputLayout conditionLayout = ViewBindings.findChildViewById(rootView, id);
+      if (conditionLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.genderInput;
+      MaterialAutoCompleteTextView genderInput = ViewBindings.findChildViewById(rootView, id);
+      if (genderInput == null) {
+        break missingId;
+      }
+
+      id = R.id.genderLayout;
+      TextInputLayout genderLayout = ViewBindings.findChildViewById(rootView, id);
+      if (genderLayout == null) {
         break missingId;
       }
 
@@ -125,15 +168,15 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.passwordInput;
-      TextInputEditText passwordInput = ViewBindings.findChildViewById(rootView, id);
-      if (passwordInput == null) {
+      id = R.id.rehabPlanInput;
+      TextInputEditText rehabPlanInput = ViewBindings.findChildViewById(rootView, id);
+      if (rehabPlanInput == null) {
         break missingId;
       }
 
-      id = R.id.passwordLayout;
-      TextInputLayout passwordLayout = ViewBindings.findChildViewById(rootView, id);
-      if (passwordLayout == null) {
+      id = R.id.rehabPlanLayout;
+      TextInputLayout rehabPlanLayout = ViewBindings.findChildViewById(rootView, id);
+      if (rehabPlanLayout == null) {
         break missingId;
       }
 
@@ -149,9 +192,9 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySignupBinding((NestedScrollView) rootView, emailInput, emailLayout,
-          goToLogin, nameInput, nameLayout, passwordInput, passwordLayout, signupBack,
-          submitSignupButton);
+      return new ActivitySignupBinding((NestedScrollView) rootView, ageInput, ageLayout,
+          conditionInput, conditionLayout, genderInput, genderLayout, goToLogin, nameInput,
+          nameLayout, rehabPlanInput, rehabPlanLayout, signupBack, submitSignupButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

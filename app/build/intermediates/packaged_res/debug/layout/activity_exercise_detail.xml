@@ -71,17 +71,34 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
+                android:layout_height="200dp"
                 android:background="@drawable/bg_hero_thumb">
 
                 <ImageView
-                    android:id="@+id/heroIcon"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:id="@+id/heroImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/watch_demo"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:layout_gravity="center"
+                    android:alpha="0.92"
                     android:contentDescription="@null"
-                    android:src="@drawable/ic_knee_extension" />
+                    android:src="@drawable/ic_play_circle"
+                    app:tint="@android:color/white" />
             </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/viewReferenceButton"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/view_reference_photo"
+                android:textAllCaps="false" />
 
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"

@@ -4,13 +4,13 @@ package com.rehaby.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rehaby.app.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,16 +21,16 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final LinearLayout dashboardHeader;
+  public final BottomNavigationView bottomNav;
 
   @NonNull
-  public final RecyclerView exerciseList;
+  public final FragmentContainerView fragmentContainer;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout dashboardHeader, @NonNull RecyclerView exerciseList) {
+      @NonNull BottomNavigationView bottomNav, @NonNull FragmentContainerView fragmentContainer) {
     this.rootView = rootView;
-    this.dashboardHeader = dashboardHeader;
-    this.exerciseList = exerciseList;
+    this.bottomNav = bottomNav;
+    this.fragmentContainer = fragmentContainer;
   }
 
   @Override
@@ -60,19 +60,19 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.dashboardHeader;
-      LinearLayout dashboardHeader = ViewBindings.findChildViewById(rootView, id);
-      if (dashboardHeader == null) {
+      id = R.id.bottomNav;
+      BottomNavigationView bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
         break missingId;
       }
 
-      id = R.id.exerciseList;
-      RecyclerView exerciseList = ViewBindings.findChildViewById(rootView, id);
-      if (exerciseList == null) {
+      id = R.id.fragmentContainer;
+      FragmentContainerView fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, dashboardHeader, exerciseList);
+      return new ActivityMainBinding((ConstraintLayout) rootView, bottomNav, fragmentContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

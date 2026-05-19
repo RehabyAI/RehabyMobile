@@ -3,6 +3,7 @@ package com.rehaby.app
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -13,18 +14,31 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
+import coil.load
+import com.google.mediapipe.framework.image.BitmapImageBuilder
 import com.google.mediapipe.tasks.vision.poselandmarker.PoseLandmarkerResult
 import com.rehaby.app.data.ExerciseRepository
+import com.rehaby.app.data.remote.ApiModule
+import com.rehaby.app.data.remote.CreateSessionRequestDto
+import com.rehaby.app.data.remote.FrameAnalysisRequestDto
 import com.rehaby.app.databinding.ActivityPoseDetectionBinding
 import com.rehaby.app.model.SessionResult
 import com.rehaby.app.pose.PoseLandmarkerHelper
 import com.rehaby.app.pose.PoseValidator
 import com.rehaby.app.pose.ValidationOutput
+import com.rehaby.app.util.ImageEncoding
 import com.rehaby.app.util.MpImageUtils
+import com.rehaby.app.util.SessionManager
 import com.rehaby.app.util.VoiceFeedbackManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.util.Collections
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicLong
+import kotlin.math.roundToInt
 
 class PoseDetectionActivity : AppCompatActivity(), PoseLandmarkerHelper.LandmarkerListener {
 
@@ -44,9 +58,15 @@ class PoseDetectionActivity : AppCompatActivity(), PoseLandmarkerHelper.Landmark
     private var sessionStartMs = 0L
     private val feedbackSeen = linkedSetOf<String>()
     private var finished = false
+    @Volatile
+    private var sessionEnding = false
+
+    private val analysisScores = Collections.synchronizedList(mutableListOf<Int>())
+    private val apiFeedbackForErrors = Collections.synchronizedList(mutableListOf<String>())
 
     private val useFrontCamera = false
     private val lastFrameTimestampNs = AtomicLong(0L)
+    private val lastFrameAnalysisMs = AtomicLong(0L)
 
     private var cameraPermissionGranted = false
     private var landmarkerReady = false
@@ -99,7 +119,11 @@ class PoseDetectionActivity : AppCompatActivity(), PoseLandmarkerHelper.Landmark
 
         sessionStartMs = System.currentTimeMillis()
 
-        binding.correctPoseImage.setImageResource(correctImageRes)
+        binding.correctPoseImage.load(exercise.referenceImageUrl) {
+            placeholder(correctImageRes)
+            error(correctImageRes)
+            crossfade(true)
+        }
         binding.correctPoseCard.visibility = View.GONE
         binding.alertBanner.visibility = View.GONE
 
@@ -158,12 +182,62 @@ class PoseDetectionActivity : AppCompatActivity(), PoseLandmarkerHelper.Landmark
                 .build()
 
             analysis.setAnalyzer(inferenceExecutor) { imageProxy ->
-                lastFrameTimestampNs.set(imageProxy.imageInfo.timestamp)
-                val mpImage = MpImageUtils.imageProxyToMpImage(imageProxy, useFrontCamera)
-                if (mpImage != null) {
-                    poseLandmarkerHelper.detect(mpImage, imageProxy.imageInfo.timestamp)
+                val ts = imageProxy.imageInfo.timestamp
+                lastFrameTimestampNs.set(ts)
+
+                val bmp = MpImageUtils.buildPipelineBitmap(imageProxy, useFrontCamera) ?: run {
+                    imageProxy.close()
+                    return@setAnalyzer
                 }
                 imageProxy.close()
+
+                val now = System.currentTimeMillis()
+                val sendApi = !finished && !sessionEnding &&
+                    (now - lastFrameAnalysisMs.get() >= FRAME_ANALYSIS_INTERVAL_MS)
+                if (sendApi) {
+                    lastFrameAnalysisMs.set(now)
+                }
+
+                val apiBitmap = if (sendApi) {
+                    bmp.copy(Bitmap.Config.ARGB_8888, false)
+                } else {
+                    null
+                }
+
+                val mpImage = BitmapImageBuilder(bmp).build()
+                poseLandmarkerHelper.detect(mpImage, ts)
+                bmp.recycle()
+
+                if (apiBitmap != null) {
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        var toRecycle = apiBitmap
+                        try {
+                            val b64 = ImageEncoding.toJpegBase64(toRecycle)
+                            val resp = ApiModule.rehabApi.analyzeFrame(
+                                FrameAnalysisRequestDto(image_base64 = b64)
+                            )
+                            if (resp.isSuccessful && resp.body() != null) {
+                                val body = resp.body()!!
+                                synchronized(analysisScores) { analysisScores.add(body.score) }
+                                if (!body.status.equals("Good", ignoreCase = true) &&
+                                    body.feedback.isNotBlank()
+                                ) {
+                                    synchronized(apiFeedbackForErrors) {
+                                        if (body.feedback !in apiFeedbackForErrors) {
+                                            apiFeedbackForErrors.add(body.feedback)
+                                        }
+                                    }
+                                }
+                            }
+                        } catch (_: Exception) {
+                            // ignore individual frame failures
+                        } finally {
+                            if (!toRecycle.isRecycled) {
+                                toRecycle.recycle()
+                            }
+                        }
+                    }
+                }
             }
 
             val selector = CameraSelector.Builder()
@@ -241,6 +315,7 @@ class PoseDetectionActivity : AppCompatActivity(), PoseLandmarkerHelper.Landmark
     private fun finishSession(output: ValidationOutput) {
         if (finished) return
         finished = true
+        sessionEnding = true
 
         val durationSec = (System.currentTimeMillis() - sessionStartMs) / 1000L
         val totalRepsMetric = if (holdSeconds > 0) holdSeconds else output.repCount
@@ -256,15 +331,60 @@ class PoseDetectionActivity : AppCompatActivity(), PoseLandmarkerHelper.Landmark
             feedbackGiven = feedbackSeen.toList()
         )
 
-        startActivity(
-            Intent(this, SessionSummaryActivity::class.java).apply {
-                putExtra(SessionSummaryActivity.EXTRA_EXERCISE_NAME, result.exerciseName)
-                putExtra(SessionSummaryActivity.EXTRA_FORM_ACCURACY, result.formAccuracyPercent)
-                putExtra(SessionSummaryActivity.EXTRA_REPS_COMPLETED, result.totalReps)
-                putExtra(SessionSummaryActivity.EXTRA_DURATION_SEC, result.durationSeconds)
+        lifecycleScope.launch {
+            val apiAvg = synchronized(analysisScores) {
+                if (analysisScores.isEmpty()) {
+                    0
+                } else {
+                    analysisScores.average().roundToInt().coerceIn(0, 100)
+                }
             }
-        )
-        finish()
+
+            val errorsDetected = synchronized(apiFeedbackForErrors) {
+                (apiFeedbackForErrors + feedbackSeen).distinct().take(50)
+            }
+
+            val feedbackSummary = buildString {
+                append(getString(R.string.session_feedback_avg_api, apiAvg))
+                if (feedbackSeen.isNotEmpty()) {
+                    append(" ")
+                    append(feedbackSeen.joinToString("; ").take(400))
+                }
+            }.take(2000)
+
+            withContext(Dispatchers.IO) {
+                try {
+                    ApiModule.rehabApi.createSession(
+                        CreateSessionRequestDto(
+                            patient_id = SessionManager.getPatientId(this@PoseDetectionActivity).orEmpty(),
+                            exercise_name = exerciseName,
+                            rep_count = totalRepsMetric,
+                            average_score = apiAvg,
+                            errors_detected = errorsDetected,
+                            feedback_summary = feedbackSummary
+                        )
+                    )
+                } catch (_: Exception) {
+                    // session sync optional — still show summary
+                }
+            }
+
+            val displayAccuracy = if (apiAvg > 0) {
+                apiAvg
+            } else {
+                output.formAccuracy
+            }
+
+            startActivity(
+                Intent(this@PoseDetectionActivity, SessionSummaryActivity::class.java).apply {
+                    putExtra(SessionSummaryActivity.EXTRA_EXERCISE_NAME, result.exerciseName)
+                    putExtra(SessionSummaryActivity.EXTRA_FORM_ACCURACY, displayAccuracy)
+                    putExtra(SessionSummaryActivity.EXTRA_REPS_COMPLETED, result.totalReps)
+                    putExtra(SessionSummaryActivity.EXTRA_DURATION_SEC, result.durationSeconds)
+                }
+            )
+            finish()
+        }
     }
 
     override fun onDestroy() {
@@ -277,6 +397,7 @@ class PoseDetectionActivity : AppCompatActivity(), PoseLandmarkerHelper.Landmark
     companion object {
         const val EXTRA_EXERCISE_ID = "exerciseId"
         private const val REQ_CAM = 1001
+        private const val FRAME_ANALYSIS_INTERVAL_MS = 500L
     }
 }
 

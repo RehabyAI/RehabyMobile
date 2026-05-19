@@ -8,8 +8,12 @@ import com.google.mediapipe.framework.image.MPImage
 
 object MpImageUtils {
 
-    fun imageProxyToMpImage(image: ImageProxy, useFrontCamera: Boolean): MPImage? {
-        val bitmap = imageProxyToBitmap(image) ?: return null
+    /**
+     * Full camera pipeline bitmap: RGBA from [ImageProxy], rotation, optional mirror.
+     * Caller must recycle when done (after building [MPImage] / copies for API).
+     */
+    fun buildPipelineBitmap(image: ImageProxy, useFrontCamera: Boolean): Bitmap? {
+        val bitmap = rawImageProxyToBitmap(image) ?: return null
         val rotation = image.imageInfo.rotationDegrees
         val matrix = Matrix()
         matrix.postRotate(rotation.toFloat())
@@ -24,7 +28,12 @@ object MpImageUtils {
             }
             rotated = mirrored
         }
-        return BitmapImageBuilder(rotated).build()
+        return rotated
+    }
+
+    fun imageProxyToMpImage(image: ImageProxy, useFrontCamera: Boolean): MPImage? {
+        val bmp = buildPipelineBitmap(image, useFrontCamera) ?: return null
+        return BitmapImageBuilder(bmp).build()
     }
 
     private fun mirrorBitmap(source: Bitmap): Bitmap {
@@ -34,7 +43,7 @@ object MpImageUtils {
         return Bitmap.createBitmap(source, 0, 0, source.width, source.height, matrix, true)
     }
 
-    private fun imageProxyToBitmap(image: ImageProxy): Bitmap? {
+    private fun rawImageProxyToBitmap(image: ImageProxy): Bitmap? {
         return try {
             val plane = image.planes[0]
             val buffer = plane.buffer.duplicate()

@@ -1,118 +1,174 @@
 [
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_item_exercise.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/item_exercise.xml"
+        "merged": "com.rehaby.app-merged_res-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.rehaby.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_pause.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_pause.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_item_patient_error.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/item_patient_error.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.rehaby.app-main-39:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_hip_abduction.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_hip_abduction.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.rehaby.app-main-39:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_activity_main.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/activity_main.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_activity_login.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/activity_login.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_activity_exercise_detail.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/activity_exercise_detail.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_item_instruction_step.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/item_instruction_step.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_item_instruction_step.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/item_instruction_step.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_activity_splash.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/activity_splash.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_warning.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_warning.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_close.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_close.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_activity_splash.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/activity_splash.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_activity_exercise_detail.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/activity_exercise_detail.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_pause.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_pause.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_activity_main.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/activity_main.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_fragment_history.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/fragment_history.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_bg_alert_banner.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/bg_alert_banner.xml"
+        "merged": "com.rehaby.app-merged_res-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.rehaby.app-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_wall_squat.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_wall_squat.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_nav_history.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_nav_history.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_activity_signup.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/activity_signup.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_bg_hero_thumb.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/bg_hero_thumb.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_bg_stat_box.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/bg_stat_box.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_bg_alert_banner.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/bg_alert_banner.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_bg_step_dot.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/bg_step_dot.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_bg_stat_box.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/bg_stat_box.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.rehaby.app-merged_res-4:/color_bottom_nav_icon.xml.flat",
+        "source": "com.rehaby.app-main-6:/color/bottom_nav_icon.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_knee_extension.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_knee_extension.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_correct_wall_squat.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/correct_wall_squat.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_hip_abduction.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_hip_abduction.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_activity_pose_detection.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/activity_pose_detection.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_arrow_back.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_arrow_back.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_nav_errors.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_nav_errors.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_correct_knee_extension.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/correct_knee_extension.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_correct_hip_abduction.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/correct_hip_abduction.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_bg_hero_thumb.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/bg_hero_thumb.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_activity_login.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/activity_login.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_bg_voice_pill.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/bg_voice_pill.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_bg_voice_pill.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/bg_voice_pill.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_warning.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_warning.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_nav_home.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_nav_home.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_ic_launcher.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/ic_launcher.xml"
+        "merged": "com.rehaby.app-merged_res-4:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.rehaby.app-main-6:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_bg_badge.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/bg_badge.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_bg_step_dot.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/bg_step_dot.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_correct_wall_squat.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/correct_wall_squat.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_nav_trends.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_nav_trends.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_activity_session_summary.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/activity_session_summary.xml"
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_close.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_close.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/layout_activity_pose_detection.xml.flat",
-        "source": "com.rehaby.app-main-39:/layout/activity_pose_detection.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_fragment_trends.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/fragment_trends.xml"
     },
     {
-        "merged": "com.rehaby.app-merged_res-37:/drawable_correct_hip_abduction.xml.flat",
-        "source": "com.rehaby.app-main-39:/drawable/correct_hip_abduction.xml"
+        "merged": "com.rehaby.app-merged_res-4:/layout_item_history_session.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/item_history_session.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/drawable_bg_badge.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/bg_badge.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/layout_item_exercise.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/item_exercise.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_knee_extension.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_knee_extension.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_play_circle.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_play_circle.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_wall_squat.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_wall_squat.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_launcher.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/layout_activity_session_summary.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/activity_session_summary.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/drawable_ic_arrow_back.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/ic_arrow_back.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/layout_activity_signup.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/layout_fragment_home.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/layout_fragment_patient_errors.xml.flat",
+        "source": "com.rehaby.app-main-6:/layout/fragment_patient_errors.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/color_bottom_nav_text.xml.flat",
+        "source": "com.rehaby.app-main-6:/color/bottom_nav_text.xml"
+    },
+    {
+        "merged": "com.rehaby.app-merged_res-4:/drawable_correct_knee_extension.xml.flat",
+        "source": "com.rehaby.app-main-6:/drawable/correct_knee_extension.xml"
     }
 ]

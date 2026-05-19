@@ -8,221 +8,245 @@
 8        android:minSdkVersion="24"
 9        android:targetSdkVersion="34" />
 10
-11    <uses-permission android:name="android.permission.CAMERA" />
-11-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:4:5-65
-11-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:4:22-62
-12
-13    <uses-feature
-13-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:5:5-7:35
-14        android:name="android.hardware.camera"
-14-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:6:9-47
-15        android:required="true" />
-15-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:7:9-32
-16
-17    <permission
-17-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-18        android:name="com.rehaby.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-18-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-19        android:protectionLevel="signature" />
-19-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-20
-21    <uses-permission android:name="com.rehaby.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-21-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-21-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-22    <!-- <uses-sdk android:minSdkVersion="14"/> -->
-23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-23-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:25:5-79
-23-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:25:22-76
+11    <queries>
+11-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:4:5-13:15
+12        <intent>
+12-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:5:9-8:18
+13            <action android:name="android.intent.action.VIEW" />
+13-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:6:13-65
+13-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:6:21-62
+14
+15            <data android:scheme="https" />
+15-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:7:13-44
+15-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:7:19-41
+16        </intent>
+17        <intent>
+17-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:9:9-12:18
+18            <action android:name="android.intent.action.VIEW" />
+18-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:6:13-65
+18-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:6:21-62
+19
+20            <data android:scheme="http" />
+20-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:7:13-44
+20-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:7:19-41
+21        </intent>
+22    </queries>
+23
 24    <uses-permission android:name="android.permission.INTERNET" />
-24-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:26:5-67
-24-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:26:22-64
-25
-26    <application
-26-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:9:5-44:19
-27        android:allowBackup="true"
-27-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:10:9-35
-28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-28-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-29        android:debuggable="true"
-30        android:extractNativeLibs="false"
-31        android:icon="@drawable/ic_launcher"
-31-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:11:9-45
-32        android:label="@string/app_name"
-32-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:12:9-41
-33        android:roundIcon="@drawable/ic_launcher"
-33-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:13:9-50
-34        android:supportsRtl="true"
-34-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:14:9-35
-35        android:theme="@style/Theme.Rehaby" >
-35-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:15:9-44
-36        <activity
-36-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:16:9-24:20
-37            android:name="com.rehaby.app.SplashActivity"
-37-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:17:13-43
-38            android:exported="true"
-38-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:18:13-36
-39            android:theme="@style/Theme.Rehaby" >
-39-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:19:13-48
-40            <intent-filter>
-40-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:20:13-23:29
-41                <action android:name="android.intent.action.MAIN" />
-41-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:21:17-69
-41-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:21:25-66
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:22:17-77
-43-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:22:27-74
-44            </intent-filter>
-45        </activity>
-46        <activity
-46-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:25:9-27:40
-47            android:name="com.rehaby.app.LoginActivity"
-47-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:26:13-42
-48            android:exported="false" />
-48-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:27:13-37
+24-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:15:5-67
+24-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:15:22-64
+25    <uses-permission android:name="android.permission.CAMERA" />
+25-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:16:5-65
+25-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:16:22-62
+26
+27    <uses-feature
+27-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:17:5-19:35
+28        android:name="android.hardware.camera"
+28-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:18:9-47
+29        android:required="true" />
+29-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:19:9-32
+30
+31    <permission
+31-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+32        android:name="com.rehaby.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.rehaby.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+35-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+36    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+37    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+37-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:25:5-79
+37-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:25:22-76
+38
+39    <application
+39-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:21:5-56:19
+40        android:allowBackup="true"
+40-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:22:9-35
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.12.0] /Users/apple/.gradle/caches/8.9/transforms/7066eb93bc0f412ada0c124253e67c33/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+42        android:debuggable="true"
+43        android:extractNativeLibs="false"
+44        android:icon="@drawable/ic_launcher"
+44-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:23:9-45
+45        android:label="@string/app_name"
+45-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:24:9-41
+46        android:roundIcon="@drawable/ic_launcher"
+46-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:25:9-50
+47        android:supportsRtl="true"
+47-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:26:9-35
+48        android:theme="@style/Theme.Rehaby" >
+48-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:27:9-44
 49        <activity
-49-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:28:9-30:40
-50            android:name="com.rehaby.app.SignupActivity"
+49-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:28:9-36:20
+50            android:name="com.rehaby.app.SplashActivity"
 50-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:29:13-43
-51            android:exported="false" />
-51-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:30:13-37
-52        <activity
-52-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:31:9-33:40
-53            android:name="com.rehaby.app.MainActivity"
-53-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:32:13-41
-54            android:exported="false" />
-54-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:33:13-37
-55        <activity
-55-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:34:9-36:40
-56            android:name="com.rehaby.app.ExerciseDetailActivity"
-56-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:35:13-51
-57            android:exported="false" />
-57-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:36:13-37
-58        <activity
-58-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:37:9-40:52
-59            android:name="com.rehaby.app.PoseDetectionActivity"
-59-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:38:13-50
-60            android:exported="false"
-60-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:39:13-37
-61            android:screenOrientation="portrait" />
-61-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:40:13-49
+51            android:exported="true"
+51-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:30:13-36
+52            android:theme="@style/Theme.Rehaby" >
+52-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:31:13-48
+53            <intent-filter>
+53-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:32:13-35:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:33:17-69
+54-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:33:25-66
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:34:17-77
+56-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:34:27-74
+57            </intent-filter>
+58        </activity>
+59        <activity
+59-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:37:9-39:40
+60            android:name="com.rehaby.app.LoginActivity"
+60-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:38:13-42
+61            android:exported="false" />
+61-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:39:13-37
 62        <activity
-62-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:41:9-43:40
-63            android:name="com.rehaby.app.SessionSummaryActivity"
-63-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:42:13-51
+62-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:40:9-42:40
+63            android:name="com.rehaby.app.SignupActivity"
+63-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:41:13-43
 64            android:exported="false" />
-64-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:43:13-37
-65
-66        <service
-66-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:24:9-33:19
-67            android:name="androidx.camera.core.impl.MetadataHolderService"
-67-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:25:13-75
-68            android:enabled="false"
-68-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:26:13-36
-69            android:exported="false" >
-69-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:27:13-37
-70            <meta-data
-70-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:30:13-32:89
-71                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-71-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:31:17-103
-72                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-72-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:32:17-86
-73        </service>
-74
-75        <provider
-75-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-76            android:name="androidx.startup.InitializationProvider"
-76-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-77            android:authorities="com.rehaby.app.androidx-startup"
-77-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-78            android:exported="false" >
-78-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-79            <meta-data
-79-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-80                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-80-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-81                android:value="androidx.startup" />
-81-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-82            <meta-data
-82-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/apple/.gradle/caches/8.9/transforms/d9916714218a1747d757d20f2072412d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
-83                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-83-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/apple/.gradle/caches/8.9/transforms/d9916714218a1747d757d20f2072412d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
-84                android:value="androidx.startup" />
-84-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/apple/.gradle/caches/8.9/transforms/d9916714218a1747d757d20f2072412d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
-85            <meta-data
-85-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-86                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-86-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-87                android:value="androidx.startup" />
-87-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-88        </provider>
-89
-90        <service
-90-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:29:9-35:19
-91            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-91-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:30:13-103
-92            android:exported="false" >
-92-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:31:13-37
-93            <meta-data
-93-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:32:13-34:39
-94                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-94-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:33:17-94
-95                android:value="cct" />
-95-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:34:17-36
-96        </service>
-97        <service
-97-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:26:9-30:19
-98            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-98-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:27:13-117
-99            android:exported="false"
-99-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:28:13-37
-100            android:permission="android.permission.BIND_JOB_SERVICE" >
-100-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:29:13-69
-101        </service>
+64-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:42:13-37
+65        <activity
+65-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:43:9-45:40
+66            android:name="com.rehaby.app.MainActivity"
+66-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:44:13-41
+67            android:exported="false" />
+67-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:45:13-37
+68        <activity
+68-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:46:9-48:40
+69            android:name="com.rehaby.app.ExerciseDetailActivity"
+69-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:47:13-51
+70            android:exported="false" />
+70-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:48:13-37
+71        <activity
+71-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:49:9-52:52
+72            android:name="com.rehaby.app.PoseDetectionActivity"
+72-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:50:13-50
+73            android:exported="false"
+73-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:51:13-37
+74            android:screenOrientation="portrait" />
+74-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:52:13-49
+75        <activity
+75-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:53:9-55:40
+76            android:name="com.rehaby.app.SessionSummaryActivity"
+76-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:54:13-51
+77            android:exported="false" />
+77-->/Users/apple/Documents/android-workspace/hackathon/Rehaby /app/src/main/AndroidManifest.xml:55:13-37
+78
+79        <service
+79-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:24:9-33:19
+80            android:name="androidx.camera.core.impl.MetadataHolderService"
+80-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:25:13-75
+81            android:enabled="false"
+81-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:26:13-36
+82            android:exported="false" >
+82-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:27:13-37
+83            <meta-data
+83-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:30:13-32:89
+84                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+84-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:31:17-103
+85                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+85-->[androidx.camera:camera-camera2:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/337d05c42c19b5a439608df452264d38/transformed/camera-camera2-1.3.1/AndroidManifest.xml:32:17-86
+86        </service>
+87
+88        <provider
+88-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+89            android:name="androidx.startup.InitializationProvider"
+89-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+90            android:authorities="com.rehaby.app.androidx-startup"
+90-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+91            android:exported="false" >
+91-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+92            <meta-data
+92-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+93                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+93-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+94                android:value="androidx.startup" />
+94-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/8.9/transforms/73c615fe447ad3f472438c897b3610ce/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+95            <meta-data
+95-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/apple/.gradle/caches/8.9/transforms/b42736be1698db5736159459bb10913e/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+96                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+96-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/apple/.gradle/caches/8.9/transforms/b42736be1698db5736159459bb10913e/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+97                android:value="androidx.startup" />
+97-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/apple/.gradle/caches/8.9/transforms/b42736be1698db5736159459bb10913e/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+98            <meta-data
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+99                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+100                android:value="androidx.startup" />
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+101        </provider>
 102
-103        <receiver
-103-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:32:9-34:40
-104            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-104-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:33:13-132
-105            android:exported="false" />
-105-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:34:13-37
-106        <receiver
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-107            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-108            android:directBootAware="false"
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-109            android:enabled="true"
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-110            android:exported="true"
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-111            android:permission="android.permission.DUMP" >
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-112            <intent-filter>
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-113                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-114            </intent-filter>
-115            <intent-filter>
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-116                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-117            </intent-filter>
-118            <intent-filter>
-118-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-119                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-119-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-119-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-120            </intent-filter>
-121            <intent-filter>
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-122                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/apple/.gradle/caches/8.9/transforms/6b818836ff53f7b7bea711c6f99c70c1/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-123            </intent-filter>
-124        </receiver>
-125    </application>
-126
-127</manifest>
+103        <service
+103-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:29:9-35:19
+104            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+104-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:30:13-103
+105            android:exported="false" >
+105-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:31:13-37
+106            <meta-data
+106-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:32:13-34:39
+107                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+107-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:33:17-94
+108                android:value="cct" />
+108-->[com.google.android.datatransport:transport-backend-cct:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cad3ec3d4390db77cafa93611ded57/transformed/transport-backend-cct-3.1.0/AndroidManifest.xml:34:17-36
+109        </service>
+110        <service
+110-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:26:9-30:19
+111            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+111-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:27:13-117
+112            android:exported="false"
+112-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:28:13-37
+113            android:permission="android.permission.BIND_JOB_SERVICE" >
+113-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:29:13-69
+114        </service>
+115
+116        <receiver
+116-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:32:9-34:40
+117            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+117-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:33:13-132
+118            android:exported="false" />
+118-->[com.google.android.datatransport:transport-runtime:3.1.0] /Users/apple/.gradle/caches/8.9/transforms/26cbd7371a3430cdc97e14879b1688dc/transformed/transport-runtime-3.1.0/AndroidManifest.xml:34:13-37
+119        <receiver
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+120            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+121            android:directBootAware="false"
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+122            android:enabled="true"
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+123            android:exported="true"
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+124            android:permission="android.permission.DUMP" >
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+125            <intent-filter>
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+126                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+127            </intent-filter>
+128            <intent-filter>
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+129                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+130            </intent-filter>
+131            <intent-filter>
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+132                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+133            </intent-filter>
+134            <intent-filter>
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+135                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/apple/.gradle/caches/8.9/transforms/45ec772ecc935c692f37ea0001ad3c82/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+136            </intent-filter>
+137        </receiver>
+138    </application>
+139
+140</manifest>

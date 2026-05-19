@@ -14,6 +14,8 @@ object ExerciseRepository {
             difficulty = "Easy",
             iconResId = R.drawable.ic_knee_extension,
             correctPoseImageResId = R.drawable.correct_knee_extension,
+            demoVideoUrl = "https://www.youtube.com/watch?v=VuJZ6dqMf8M",
+            referenceImageUrl = "https://pin.it/67naZTevN",
             instructions = listOf(
                 "Sit on a chair with your back straight and feet flat on the floor",
                 "Slowly extend your right leg until it is completely straight",
@@ -31,6 +33,8 @@ object ExerciseRepository {
             difficulty = "Moderate",
             iconResId = R.drawable.ic_hip_abduction,
             correctPoseImageResId = R.drawable.correct_hip_abduction,
+            demoVideoUrl = "https://www.youtube.com/watch?v=qBqKuEQl9sI",
+            referenceImageUrl = "https://pin.it/AIAwYgjFr",
             instructions = listOf(
                 "Stand upright holding a wall or chair for balance",
                 "Keep your core engaged and back straight",
@@ -49,6 +53,8 @@ object ExerciseRepository {
             difficulty = "Moderate",
             iconResId = R.drawable.ic_wall_squat,
             correctPoseImageResId = R.drawable.correct_wall_squat,
+            demoVideoUrl = "https://www.youtube.com/watch?v=hAvVXAE9Bgs",
+            referenceImageUrl = "https://pin.it/sr5iv9A7B",
             instructions = listOf(
                 "Stand with your back flat against a wall",
                 "Walk your feet forward about 2 feet from the wall",
